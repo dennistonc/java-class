@@ -12,23 +12,20 @@ package com.sg.foundations.flowcontrol.whiles;
 public class LovesMe {
     public static void main(String[] args) {
         
-        int petalNum = 34;
-        boolean isEven;
-        
-        if (petalNum % 2 == 0) {
-            isEven = true;
-        } else {
-            isEven = false;
-        }
+        int petalNum = 35;
         
         do
         {
+        if (petalNum % 2 == 0) {
             System.out.println("It loves me!");
-            petalNum--;
-            break;
-        } while (isEven);
-        
-        System.out.println("It loves me NOT!");
+        } else {
+            System.out.println("It loves me NOT!");
+        }
+        petalNum--;
+        } while (petalNum > 0);
+
+        if (petalNum % 2 == 0) {
+            System.out.println("I knew it! It loves me!");
+        }
     }
-    // I'm at a loss on this one. My brain hurts.
 }
