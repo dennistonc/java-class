@@ -17,21 +17,21 @@ public class LazyTeenager {
         Random randomChance = new Random();
         
         boolean isClean = false;
-        int chanceOfClean = randomChance.nextInt(100);
+        int willClean = randomChance.nextInt(101);
         int timesAsked = 0;
         
-//        do
-//        {
+        do
+        {
         if (isClean == false && timesAsked < 7) {
-            System.out.println("Clean your room!!");
             timesAsked++;
-            if (chanceOfClean > 50) {
+            System.out.println("Clean your room!! (x" + timesAsked + ")");
+            if (willClean <= (timesAsked*10)) {
             System.out.println("Fine! I'll clean my room. Ugh. So annoying.");
             isClean = true;
-//            break;
+            break;
             }
         }
-//        } while (timesAsked < 7);
+        } while (timesAsked < 7);
         
         if (timesAsked == 7) {
             System.out.println("That's IT, I'm doing it!! YOU'RE GROUNDED AND I'M TAKING YOUR VBUCKS TOO, PUNK!");
@@ -39,5 +39,5 @@ public class LazyTeenager {
     }
 }
 
-// will be revisiting this problem...
-
+// o lort this tested my patience and sanity bc of the wording on the problem with the percent chance
+// must make the percent willClean within a window of the percent of the times asked
